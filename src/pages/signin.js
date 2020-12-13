@@ -1,41 +1,53 @@
-import React, {Fragment, useState} from 'react';
+import React, {Fragment, useState, useContext} from 'react';
+import {useHistory} from 'react-router-dom';
 import HeaderContainer from "../containers/header";
 import FooterContainer from "../containers/footer";
-import SingInForm from "../components/sign-in-form";
+import AuthForm from "../components/auth-form";
+import {FirebaseContext} from "../context/firebase";
+import * as ROUTES from '../constants/routes';
 
 function Signin(props) {
+    const {firebase} = useContext(FirebaseContext);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
+    const history = useHistory();
+
     // valid inputs
     const isInvalid = password === '' || email === '';
-
-    console.log(isInvalid);
 
     const handleSignIn = (e) => {
         e.preventDefault();
 
-
+        firebase.auth().signInWithEmailAndPassword(email, password)
+            .then(() => {
+                history.push(ROUTES.BROWSE);
+            })
+            .catch(error => {
+                setEmail('');
+                setPassword('');
+                setError(error.message);
+            });
     };
 
     return (
         <Fragment>
             <HeaderContainer>
-                <SingInForm>
-                    <SingInForm.Title>Войти</SingInForm.Title>
+                <AuthForm>
+                    <AuthForm.Title>Войти</AuthForm.Title>
 
-                    {error && <SingInForm.Error>{error}</SingInForm.Error>}
+                    {error && <AuthForm.Error>{error}</AuthForm.Error>}
 
-                    <SingInForm.Base onSubmit={handleSignIn} method="POST">
-                        <SingInForm.Input
+                    <AuthForm.Base onSubmit={handleSignIn} method="POST">
+                        <AuthForm.Input
                             placeholder="Адрес электронной почты"
                             type="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
 
-                        <SingInForm.Input
+                        <AuthForm.Input
                             placeholder="Пароль"
                             type="password"
                             autoComplete="off"
@@ -43,19 +55,19 @@ function Signin(props) {
                             onChange={(e) => setPassword(e.target.value)}
                         />
 
-                        <SingInForm.Submit disabled={isInvalid} type="submit">
+                        <AuthForm.Submit disabled={isInvalid} type="submit">
                             Войти
-                        </SingInForm.Submit>
+                        </AuthForm.Submit>
 
-                        <SingInForm.Text>
+                        <AuthForm.Text>
                             Впервые на Netflix?
-                            <SingInForm.Link to="/signup">Зарегистрируйтесь сейчас</SingInForm.Link>
+                            <AuthForm.Link to="/signup"> Зарегистрируйтесь сейчас</AuthForm.Link>
 
-                        </SingInForm.Text>
+                        </AuthForm.Text>
 
-                        <SingInForm.SmallText>Эта страница защищена Google reCAPTCHA, чтобы мы знали, что вы не бот.</SingInForm.SmallText>
-                    </SingInForm.Base>
-                </SingInForm>
+                        <AuthForm.SmallText>Эта страница защищена Google reCAPTCHA, чтобы мы знали, что вы не бот.</AuthForm.SmallText>
+                    </AuthForm.Base>
+                </AuthForm>
             </HeaderContainer>
 
             <FooterContainer/>

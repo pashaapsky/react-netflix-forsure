@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import faqData from '../fixtures/faqs'
 import Accordion from "../components/accordion";
 import CallForm from "../components/call-form";
