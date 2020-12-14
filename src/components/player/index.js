@@ -1,10 +1,11 @@
-import React, {useState, useContext, createContext} from 'react';
+import React, {useState, useContext, createContext, useEffect} from 'react';
 import ReactDom from 'react-dom'
+import YouTube from "react-youtube";
+import movieTrailer from 'movie-trailer'
 import {Container, Button, Overlay, Inner, Close} from './styles/player'
-import CallForm from "../call-form";
+import {FeatureContext} from "../card";
 
 export const VideoPlayerContext = createContext();
-
 
 function Player({children, ...restProps}) {
     const [showPlayer, setShowPlayer] = useState(false);
@@ -20,15 +21,31 @@ function Player({children, ...restProps}) {
     )
 }
 
-Player.Video = function PlayerVideo({src, ...restProps}) {
+Player.Video = function PlayerVideo({...restProps}) {
     const {showPlayer, setShowPlayer} = useContext(VideoPlayerContext);
+    const {itemFeature} = useContext(FeatureContext);
+
+    const [videoId, setVideoId] = useState('');
+
+    useEffect(() => {
+        if (itemFeature) {
+            movieTrailer(itemFeature.title, {id: true, multi: false})
+                .then(res => setVideoId(res));
+        }
+
+    }, [itemFeature]);
+
 
     return showPlayer ? ReactDom.createPortal(
         <Overlay {...restProps} onClick={() => setShowPlayer(false)}>
             <Inner>
-                <video id="netflix-player" controls>
-                    <source src={src} type="video/mp4"/>
-                </video>
+                <YouTube videoId={videoId} containerClassName="youtube-player" opts={{
+                    height: "100%",
+                    width: "100%",
+                    playerVars: {
+                        autoplay: 1,
+                    }
+                }}/>
 
                 <Close/>
             </Inner>

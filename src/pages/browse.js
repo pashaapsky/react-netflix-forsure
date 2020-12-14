@@ -8,8 +8,6 @@ function Browse(props) {
     const {films} = useMovies('films');
     const slides = selectionFilter({series, films});
 
-    console.log(slides);
-
     return (
         <BrowseContainer slides={slides}/>
     );

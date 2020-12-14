@@ -5,6 +5,7 @@
     "subTitle": "Смотрите на Smart TV, PlayStation, Xbox, Chromecast, Apple TV, плеерах Blu-ray и других устройствах.",
     "image": "/images/misc/tv.png",
     "alt": "Смотреть на телевизоре.",
+    "videoMark": "1",
     "video": "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v",
     "direction": "row"
   },
@@ -14,6 +15,7 @@
     "subTitle": "Сохраняйте видео в избранном, и у вас всегда будет, что посмотреть.",
     "image": "/images/misc/home-mobile.jpg",
     "alt": "Загружайте сериалы для просмотра офлайн.",
+    "videoMark": "2",
     "video": "",
     "direction": "row-reverse"
   },
@@ -23,6 +25,7 @@
     "subTitle": "Смотрите фильмы и сериалы на телефоне, планшете, ноутбуке и телевизоре без ограничений и без дополнительной платы.",
     "image": "/images/misc/apple-tv.png",
     "alt": "Смотрите где угодно.",
+    "videoMark": "3",
     "video": "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v",
     "direction": "row"
   }

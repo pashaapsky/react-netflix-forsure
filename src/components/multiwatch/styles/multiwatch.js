@@ -23,17 +23,49 @@ export const Inner = styled.div`
 `;
 
 export const Pane = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     width: 50%;
+    
+    img {
+        z-index: 2;
+    }
     
     @media (max-width: 1000px) {
         width: 100%;
         padding: 0 45px;
         text-align: center;
+        align-items: center;
     }
 `;
 
 export const Player = styled.div`
-        
+    width: 100%;
+    height: 100%;
+    
+    max-height: 100%;
+    max-width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    
+    ${({videoMark}) => (
+        videoMark == 1 ? 
+            `max-width: 73%; max-height: 54%; top: 48%; left: 49.5%;` 
+            : 
+            `max-width: 63%; max-height: 47%; top: 34%; left: 50%;`
+        )}
+    
+    video {
+        width: 100%;
+        height: 100%;
+    }
+
 `;
 
 export const Title = styled.h1`

@@ -13,8 +13,8 @@ function MultiWatchContainer () {
                     </MultiWatch.Pane>
 
                     <MultiWatch.Pane>
-                        <MultiWatch.Video src={item.video} />
                         <MultiWatch.Image src={item.image} alt={item.alt} />
+                        <MultiWatch.Video videoMark={item.videoMark} src={item.video} />
                     </MultiWatch.Pane>
                 </MultiWatch>
             ))}

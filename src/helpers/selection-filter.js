@@ -2,45 +2,45 @@ export default function selectionFilter({series, films}) {
     return {
         series: [
             {
-                title: 'Documentaries',
+                title: 'Документальные',
                 data: series.filter(item => item.genre === 'documentaries')
             },
             {
-                title: 'Comedies',
+                title: 'Комедии',
                 data: series.filter(item => item.genre === 'comedies')
             },
             {
-                title: 'Children',
+                title: 'Детское',
                 data: series.filter(item => item.genre === 'children')
             },
             {
-                title: 'Crime',
+                title: 'Криминальное',
                 data: series.filter(item => item.genre === 'crime')
             },
             {
-                title: 'Feel Good',
+                title: 'Успокаивающее',
                 data: series.filter(item => item.genre === 'feel-good')
             },
         ],
         films: [
             {
-                title: 'Drama',
+                title: 'Драмма',
                 data: films.filter(item => item.genre === 'drama')
             },
             {
-                title: 'Thriller',
+                title: 'Триллеры',
                 data: films.filter(item => item.genre === 'thriller')
             },
             {
-                title: 'Children',
+                title: 'Детское',
                 data: films.filter(item => item.genre === 'children')
             },
             {
-                title: 'Suspense',
+                title: 'Остросюжетное',
                 data: films.filter(item => item.genre === 'suspense')
             },
             {
-                title: 'Romance',
+                title: 'Романы',
                 data: films.filter(item => item.genre === 'romance')
             },
         ],

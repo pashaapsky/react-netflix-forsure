@@ -19,27 +19,15 @@ export const Overlay = styled.div`
     margin: 0 20px;
 `;
 
-export const Inner = styled.div`
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    
-    video {
-        height: 100%;
-        width: 100%;
-    }
-`;
-
 export const Close = styled.button`
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 10px;
+    top: 10px;
     
     width: 22px;
     height: 22px;
     
-    opacity: 0.3;
+    opacity: 1;
     
     background-color: transparent;
     
@@ -59,7 +47,7 @@ export const Close = styled.button`
         content: ' ';
         height: 22px;
         width: 2px;
-        background-color: #333;
+        background-color: #fff;
     }
     
     &:before {
@@ -68,6 +56,22 @@ export const Close = styled.button`
     
     &:after {
         transform: rotate(-45deg);
+    }
+`;
+
+export const Inner = styled.div`
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    max-height: 60%;
+    margin: auto;
+   
+    div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
     }
 `;
 

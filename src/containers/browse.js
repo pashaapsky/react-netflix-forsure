@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect, Fragment} from 'react';
+import React, {useContext, useState, useEffect, Fragment, createContext} from 'react';
 import SelectProfileContainer from "./profile";
 import {FirebaseContext} from "../context/firebase";
 import Loading from "../components/loading";
@@ -9,11 +9,9 @@ import logo from "../logo.svg"
 import FooterContainer from "./footer";
 import Player from "../components/player";
 import Fuse from "fuse.js";
-/**
- * @return {null}
- */
+
 function BrowseContainer({slides}) {
-    const [category, setCategory] = useState('series');
+    const [category, setCategory] = useState('films');
     const [slideRows, setSlideRows] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [profile, setProfile] = useState({});
@@ -110,6 +108,7 @@ function BrowseContainer({slides}) {
                         избавить его от злодеев.
                     </Header.Text>
 
+
                     <Header.PlayButton>
                         Смотреть
                     </Header.PlayButton>
@@ -135,15 +134,16 @@ function BrowseContainer({slides}) {
 
                         <Card.Feature category={category}>
                             <Player>
-                                <Player.Button />
-                                <Player.Video src="/videos/bunny.mp4" />
+                                <Player.Button/>
+                                <Player.Video/>
                             </Player>
                         </Card.Feature>
                     </Card>
                 ))}
             </Card.Group>
 
-            <FooterContainer />
+            <FooterContainer/>
+
         </Fragment>
     ) : (
         <SelectProfileContainer user={user} setProfile={setProfile}/>
