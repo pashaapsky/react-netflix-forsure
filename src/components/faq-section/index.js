@@ -1,9 +1,9 @@
 import React, {useState, useContext, createContext} from 'react';
-import {Container, Inner, Title, Frame, Item, Header, Body} from './styles/accordion'
+import {Container, Inner, Title, Frame, Item, Header, Body} from './styles/faq-section'
 
 const ToggleContext = createContext();
 
-function Accordion({children, ...restProps}) {
+function FAQSection({children, ...restProps}) {
     return (
         <Container {...restProps}>
             <Inner>{children}</Inner>
@@ -11,15 +11,15 @@ function Accordion({children, ...restProps}) {
     );
 }
 
-Accordion.Title = function AccordionTitle({children, ...restProps}) {
+FAQSection.Title = function FAQSectionTitle({children, ...restProps}) {
     return <Title {...restProps}>{children}</Title>
 };
 
-Accordion.Frame = function AccordionFrame({children, ...restProps}) {
+FAQSection.Frame = function FAQSectionFrame({children, ...restProps}) {
     return <Frame {...restProps}>{children}</Frame>
 };
 
-Accordion.Item = function AccordionItem({children, ...restProps}) {
+FAQSection.Item = function FAQSectionItem({children, ...restProps}) {
     const [toggleShow, setToggleShow] = useState(false);
 
     return (
@@ -32,7 +32,7 @@ Accordion.Item = function AccordionItem({children, ...restProps}) {
 
 };
 
-Accordion.Header = function AccordionHeader({children, ...restProps}) {
+FAQSection.Header = function FAQSectionHeader({children, ...restProps}) {
     const {toggleShow, setToggleShow} = useContext(ToggleContext);
 
     return (
@@ -51,10 +51,10 @@ Accordion.Header = function AccordionHeader({children, ...restProps}) {
     )
 };
 
-Accordion.Body = function AccordionBody({children, ...restProps}) {
+FAQSection.Body = function FAQSectionBody({children, ...restProps}) {
     const {toggleShow} = useContext(ToggleContext);
 
     return toggleShow ? <Body {...restProps}>{children}</Body> : null;
 };
 
-export default Accordion;
+export default FAQSection;

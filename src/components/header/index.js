@@ -43,7 +43,7 @@ Header.Search = function HeaderSearch({searchTerm, setSearchTerm, ...restProps})
             <SearchInput
                 type="text"
                 value={searchTerm}
-                onChange={(e) => setSearchActive(e.target.value)}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Названия, люди, жанры"
                 active={searchActive}
             >

@@ -1,4 +1,5 @@
 import React, {useState, useContext, createContext} from 'react';
+
 import {
     Container,
     Group,
@@ -63,7 +64,7 @@ Card.Feature = function CardFeature({category, children, ...restProps}) {
     const {showFeature, itemFeature, setShowFeature} = useContext(FeatureContext);
 
     return showFeature ? (
-        <Feature src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`} {...restProps}>{children}
+        <Feature src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`} {...restProps}>
             <Content>
                 <FeatureTitle>{itemFeature.title}</FeatureTitle>
 
@@ -72,17 +73,19 @@ Card.Feature = function CardFeature({category, children, ...restProps}) {
                 <FeatureClose onClick={() => setShowFeature(false)}>
                     <img src="/images/icons/close.png" alt="Close"/>
                 </FeatureClose>
+
+                <Group margin='30px 0' flexDirection='row' alignItems='center'>
+                    <Maturity rating={itemFeature.maturity}>
+                        {itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}
+                    </Maturity>
+
+                    <FeatureText fontWeight="bold">
+                        {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
+                    </FeatureText>
+                </Group>
+
+                {children}
             </Content>
-
-            <Group margin="30px 0" flexDirection="row" alignItems="center">
-                <Maturity rating={itemFeature.maturity}>
-                    {itemFeature.maturity < 12 ? 'PG': itemFeature.maturity}
-                </Maturity>
-
-                <FeatureText fontWeight="bold">
-                    {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
-                </FeatureText>
-            </Group>
         </Feature>
     ) : null
 };

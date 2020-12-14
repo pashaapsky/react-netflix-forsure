@@ -13,7 +13,8 @@ export const Title = styled.p`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    
+       
+    padding: 0 10px;
     margin-bottom: 50px;
     
     > ${Title} {
@@ -29,7 +30,7 @@ export const Container = styled.div`
 
 export const Group = styled.div`
     display: flex;
-    flex-direction: ${({ flexDirection }) => (flexDirection === 'row' ? 'row' : 'column')};
+    flex-direction: ${({ flexDirection }) => flexDirection === 'row' ? 'row' : 'column'};
     
     ${({ alignItems }) => alignItems && `align-items: ${alignItems}`};
     

@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
-import JumbotronContainer from "../containers/jumbotron";
-import AccordionContainer from "../containers/accordion";
+import MultiWatchContainer from "../containers/multiwatch";
+import FAQSectionContainer from "../containers/faq-section";
 import FooterContainer from "../containers/footer";
 import HeaderContainer from "../containers/header";
 import CallForm from "../components/call-form";
@@ -29,9 +29,9 @@ function Home(props) {
                 </Feature>
             </HeaderContainer>
 
-            <JumbotronContainer/>
+            <MultiWatchContainer/>
 
-            <AccordionContainer/>
+            <FAQSectionContainer/>
 
             <FooterContainer/>
         </Fragment>

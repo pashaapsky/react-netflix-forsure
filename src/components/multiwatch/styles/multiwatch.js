@@ -32,6 +32,10 @@ export const Pane = styled.div`
     }
 `;
 
+export const Player = styled.div`
+        
+`;
+
 export const Title = styled.h1`
     font-size: 50px;
     line-height: 1.1;

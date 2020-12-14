@@ -3,8 +3,9 @@
     "id": 1,
     "title": "Смотреть на телевизоре.",
     "subTitle": "Смотрите на Smart TV, PlayStation, Xbox, Chromecast, Apple TV, плеерах Blu-ray и других устройствах.",
-    "image": "/images/misc/home-tv.jpg",
-    "alt": "Tiger King on Netflix",
+    "image": "/images/misc/tv.png",
+    "alt": "Смотреть на телевизоре.",
+    "video": "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v",
     "direction": "row"
   },
   {
@@ -12,15 +13,17 @@
     "title": "Загружайте сериалы для просмотра офлайн.",
     "subTitle": "Сохраняйте видео в избранном, и у вас всегда будет, что посмотреть.",
     "image": "/images/misc/home-mobile.jpg",
-    "alt": "Watch on mobile",
+    "alt": "Загружайте сериалы для просмотра офлайн.",
+    "video": "",
     "direction": "row-reverse"
   },
   {
     "id": 3,
     "title": "Смотрите где угодно.",
     "subTitle": "Смотрите фильмы и сериалы на телефоне, планшете, ноутбуке и телевизоре без ограничений и без дополнительной платы.",
-    "image": "/images/misc/home-imac.jpg",
-    "alt": "Money Heist on Netflix",
+    "image": "/images/misc/apple-tv.png",
+    "alt": "Смотрите где угодно.",
+    "video": "https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v",
     "direction": "row"
   }
 ]

@@ -1,21 +1,21 @@
 import React from 'react';
-import faqData from '../fixtures/faqs'
-import Accordion from "../components/accordion";
+import faqData from '../data/faqs'
+import FAQSection from "../components/faq-section";
 import CallForm from "../components/call-form";
 
-function AccordionContainer(props) {
+function FAQSectionContainer(props) {
     return (
-        <Accordion>
-            <Accordion.Title>Распространенные вопросы</Accordion.Title>
+        <FAQSection>
+            <FAQSection.Title>Распространенные вопросы</FAQSection.Title>
 
-            <Accordion.Frame>
+            <FAQSection.Frame>
                 {faqData.map(item => (
-                    <Accordion.Item key={item.id}>
-                        <Accordion.Header>{item.header}</Accordion.Header>
-                        <Accordion.Body>{item.body}</Accordion.Body>
-                    </Accordion.Item>
+                    <FAQSection.Item key={item.id}>
+                        <FAQSection.Header>{item.header}</FAQSection.Header>
+                        <FAQSection.Body>{item.body}</FAQSection.Body>
+                    </FAQSection.Item>
                 ))}
-            </Accordion.Frame>
+            </FAQSection.Frame>
 
             <CallForm>
                 <CallForm.Text>
@@ -25,8 +25,8 @@ function AccordionContainer(props) {
                 <CallForm.Input placeholder="Адрес электронной почты"/>
                 <CallForm.Button>Получить 30 дней в подарок</CallForm.Button>
             </CallForm>
-        </Accordion>
+        </FAQSection>
     );
 }
 
-export default AccordionContainer;
+export default FAQSectionContainer;

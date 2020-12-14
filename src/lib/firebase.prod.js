@@ -1,7 +1,7 @@
 import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import {seedDatabase} from '../seed'
+import {seedDatabase} from '../firebase-seeder'
 
 const firebaseConfig = {
     apiKey: "AIzaSyDbkCEoRnfAHoxrXWvnxmX0mHiA4wo6gU0",
@@ -15,7 +15,7 @@ const firebaseConfig = {
 
 const firebase = Firebase.initializeApp(firebaseConfig);
 
-// запускать только 1 раз для заполнения данных в базу данных firebase
+// запускать только 1 раз для заполнения данных в базу данных firebase!
 // seedDatabase(firebase);
 
 export {firebase};

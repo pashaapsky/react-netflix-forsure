@@ -6,7 +6,9 @@ import Header from "../components/header";
 import Card from "../components/card";
 import * as ROUTES from '../constants/routes'
 import logo from "../logo.svg"
-
+import FooterContainer from "./footer";
+import Player from "../components/player";
+import Fuse from "fuse.js";
 /**
  * @return {null}
  */
@@ -17,10 +19,10 @@ function BrowseContainer({slides}) {
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
 
-
     const {firebase} = useContext(FirebaseContext);
     const user = firebase.auth().currentUser || {};
 
+    // загрузка профиля
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
@@ -30,6 +32,21 @@ function BrowseContainer({slides}) {
     useEffect(() => {
         setSlideRows(slides[category]);
     }, [category, slides]);
+
+    // поиск видео
+    useEffect(() => {
+        const fuse = new Fuse(slideRows, {
+            keys: ['data.description', 'data.title', 'data.genre'],
+        });
+
+        const results = fuse.search(searchTerm).map(({item}) => item);
+
+        if (slideRows.length > 0 && searchTerm.length > 3 && results.length > 0) {
+            setSlideRows(results);
+        } else {
+            setSlideRows(slides[category]);
+        }
+    }, [searchTerm]);
 
     return profile.displayName ? (
         <Fragment>
@@ -117,14 +134,16 @@ function BrowseContainer({slides}) {
                         </Card.Entities>
 
                         <Card.Feature category={category}>
-                            {/*<Player>*/}
-                            {/*    <Player.Button />*/}
-                            {/*    <Player.Video src="/videos/bunny.mp4" />*/}
-                            {/*</Player>*/}
+                            <Player>
+                                <Player.Button />
+                                <Player.Video src="/videos/bunny.mp4" />
+                            </Player>
                         </Card.Feature>
                     </Card>
                 ))}
             </Card.Group>
+
+            <FooterContainer />
         </Fragment>
     ) : (
         <SelectProfileContainer user={user} setProfile={setProfile}/>
