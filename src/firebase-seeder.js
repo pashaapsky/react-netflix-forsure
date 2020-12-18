@@ -12,109 +12,107 @@ export function seedDatabase(firebase) {
     // Documentaries
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Tiger King',
-        description: 'An exploration of big cat breeding and its bizarre underworld, populated by eccentric characters.',
+        title: 'Социальная дилемма',
+        description: 'Эксперты по технологиям бьют тревогу: их творения несут угрозу обществу. Документальная драма рассказывает о пагубном влиянии социальных сетей на жизнь людей.',
         genre: 'documentaries',
         maturity: '18',
-        slug: 'tiger-king',
+        slug: 'social-dilemma',
     });
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Amanda Knox',
-        description: 'Amanda Marie Knox is an American woman who spent almost four years in an Italian prison.',
+        title: 'Black Pink Озаряя небо',
+        description: 'Участницы корейской женской группы BLACKPINK рассказывают о трудном пути мечтаний и испытаний, который привел их к головокружительному успеху.',
         genre: 'documentaries',
         maturity: '12',
-        slug: 'amanda-knox',
+        slug: 'black-pink',
     });
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Citizenfour',
+        title: 'Американское убийство',
+        description: 'Уникальные документальные кадры описывают исчезновение Шеннон Уоттс и ее детей, а также последующие ужасные события.',
+        genre: 'documentaries',
+        maturity: '12',
+        slug: 'american-kill',
+    });
+
+    firebase.firestore().collection('series').add({
+        id: getUUID(),
+        title: 'Дэвид Аттенборо Жизнь на нашей планете',
+        description: 'Знаменитый ведущий вспоминает свою жизнь, рассуждает об истории эволюции, горюет о навсегда утерянных красотах и предлагает задуматься о том, что ждет нас в будущем.',
+        genre: 'documentaries',
+        maturity: '12',
+        slug: 'earth-life',
+    });
+
+    firebase.firestore().collection('series').add({
+        id: getUUID(),
+        title: 'Ведьмак как создавался сериал',
         description:
-            'Citizenfour is a 2014 documentary film directed by Laura Poitras, concerning Edward Snowden and the NSA spying scandal.',
+            "Погрузитесь в удивительный мир «Ведьмака» и узнайте секреты этого популярного сериала — от создания персонажей до постановки трюков.",
         genre: 'documentaries',
         maturity: '12',
-        slug: 'citizenfour',
-    });
-
-    firebase.firestore().collection('series').add({
-        id: getUUID(),
-        title: 'Super Size Me',
-        description:
-            "Director Morgan Spurlock's social experiment in fast-food gastronomy sees him attempting to subsist uniquely on food from the McDonalds",
-        genre: 'documentaries',
-        maturity: '12',
-        slug: 'super-size-me',
-    });
-
-    firebase.firestore().collection('series').add({
-        id: getUUID(),
-        title: 'Man on Wire',
-        description:
-            "Filmmaker James Marsh masterfully recreates high-wire daredevil Philippe Petit's 1974 stunt walking on a wire across the Twin Towers.",
-        genre: 'documentaries',
-        maturity: '12',
-        slug: 'man-on-wire',
+        slug: 'vedmak',
     });
 
     // Comedies
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'The Office',
+        title: 'Не пытайтесь это повторить How to sell drugs online',
         description:
-            'A motley group of office workers go through hilarious misadventures at the Scranton, Pennsylvania, branch of the Dunder Mifflin Paper Company.',
+            'Чтобы вернуть бывшую девушку, ботаник начинает торговать экстази в интернете — и становится одним из крупнейших дилеров в Европе.',
         genre: 'comedies',
         maturity: '15',
-        slug: 'the-office',
+        slug: 'dont-repeat',
     });
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Arrested Development',
+        title: 'Сексуальное просвещение',
         description:
-            'The Bluth family, once a prominent name in the business, loses everything after the head patriarch gets convicted for fraud.',
+            'Благодаря маме-сексологу неуверенный в себе Отис знает ответы на все вопросы о сексе. Поэтому бунтарка Мэйв предлагает ему открыть клинику сексотерапии.',
         genre: 'comedies',
-        maturity: '15',
-        slug: 'arrested-development',
+        maturity: '18',
+        slug: 'sex-education',
     });
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Curb Your Enthusiasm',
+        title: 'Разочарование',
         description:
-            'Larry David, a famous television writer and producer, gets into various misadventures with his friends and celebrity colleagues in Los Angeles.',
+            'Принцессу ждут дела, но праздность куда притягательнее. Свободолюбивая Бин изводит короля, наводя хаос со своими дружками — демоном и эльфом.',
         genre: 'comedies',
         maturity: '15',
-        slug: 'curb-your-enthusiasm',
+        slug: 'disenchantment',
     });
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Family Guy',
+        title: 'Конец xxxго мира',
         description:
-            'Peter Griffin and his family of two teenagers, a smart dog, a devilish baby and his wife find themselves in some of the most hilarious scenarios.',
+            'В этом трагикомическом сериале на основе графического романа юный психопат и бунтарка в поисках приключений отправляются в опасную поездку.',
         genre: 'comedies',
         maturity: '15',
-        slug: 'family-guy',
+        slug: 'the-end-world',
     });
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'South Park',
+        title: 'Рассвет апокалипсиса',
         description:
-            'Four young, schoolgoing boys, Stan Marsh, Kyle Broflovski, Eric Cartman and Kenny McCormick, who live in South Park set out on various adventures.',
+            'В Лос-Анджелесе разразился апокалипсис. По улицам бродят голодные зомби и вооруженные банды. В этом хаосе Джош пытается отыскать свою девушку — и, конечно, выжить.',
         genre: 'comedies',
         maturity: '15',
-        slug: 'south-park',
+        slug: 'day-break',
     });
 
     // Children
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Peppa Pig',
+        title: 'Свинка пеппа',
         description:
-            'Peppa, an outgoing preschool pig, participates in many energetic activities. She learns something new every day and has a lot of fun with her family and friends.',
+            'Присоединяйтесь к отважной маленькой свинке Пеппе, ее семье и друзьям. Глядя на их приключения, вы поймете, что веселиться и обучаться можно где угодно.',
         genre: 'children',
         maturity: '0',
         slug: 'peppa-pig',
@@ -122,9 +120,9 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Dora The Explorer',
+        title: 'Даша-путешественница',
         description:
-            'Dora, a seven-year-old girl of Latin American descent, embarks upon numerous adventures in the wilderness with her friend Boots, a monkey, and a variety of fun and useful tools.',
+            'ДЕВОЧКА ДАША ОБОЖАЕТ ПРИКЛЮЧЕНИЯ И ПУТЕШЕСТВИЯ. КАЖДУЮ СЕРИЮ ОНА ЛЕГКО НАХОДИТ ПОВОД ДЛЯ ТОГО, ЧТОБЫ ВЗЯТЬ СВОИХ ЛУЧШИХ ДРУЗЕЙ  — КАРТУ И РЮКЗАК  — И ОТПРАВИТЬСЯ В ПОХОД.',
         genre: 'children',
         maturity: '0',
         slug: 'dora-the-explorer',
@@ -132,9 +130,9 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'PAW Patrol',
+        title: 'Щенячий патруль',
         description:
-            'Six brave puppies, captained by a tech-savvy ten-year-old boy, Ryder, work together to accomplish high-stakes rescue missions to safeguard the residents of the Adventure Bay community.',
+            'Приключенческий комедийный сериал, в котором описываются приключения спасательной команды, состоящей из Райдера, умного мальчика, и восьми щенков: Маршала, Крепыша, Гончика, Роки, Зумы, Скай, Эверест, Треккера. Их главная миссия — защита Бухты Приключений и её жителей от всевозможных напастей.',
         genre: 'children',
         maturity: '0',
         slug: 'paw-patrol',
@@ -142,9 +140,9 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Arthur',
+        title: 'Артур',
         description:
-            'Bespectacled aardvark Arthur Read demonstrates to kids how to deal with such childhood traumas and challenges as homework, teachers and bullies.',
+            'Очкастый трубкозуб Артур Рид показывает детям, как справляться с такими детскими травмами и проблемами, как домашнее задание, учителя и хулиганы.',
         genre: 'children',
         maturity: '0',
         slug: 'arthur',
@@ -152,9 +150,9 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'SpongeBob',
+        title: 'Спанчбоб',
         description:
-            'A yellow sea sponge named SpongeBob SquarePants lives in the city of Bikini Bottom deep in the Pacific Ocean. ',
+            'Желтая морская губка по имени Губка Боб Квадратные Штаны живет в городе Бикини Боттом глубоко в Тихом океане.',
         genre: 'children',
         maturity: '0',
         slug: 'spongebob',
@@ -163,9 +161,8 @@ export function seedDatabase(firebase) {
     // Crime
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Making a Murderer',
-        description:
-            'Exonerated after spending nearly two decades in prison for a crime he did not commit, Steven Avery filed suit against Manitowoc County, Wis., and several individuals involved with his arrest.',
+        title: 'Создание убийцы',
+        description: 'Оправданный после почти двух десятилетий тюремного заключения за преступление, которого он не совершал, Стивен Эйвери подал иск против округа Манитовок, штат Висконсин, и нескольких лиц, причастных к его аресту',
         genre: 'crime',
         maturity: '18',
         slug: 'making-a-murderer',
@@ -175,7 +172,7 @@ export function seedDatabase(firebase) {
         id: getUUID(),
         title: 'Long Shot',
         description:
-            'An innocent man is accused of murder, leading his attorney on a wild chase to confirm his alibi using raw footage from a television show.',
+            'Невинный мужчина обвиняется в убийстве, который ведет своего адвоката в безумную погоню, чтобы подтвердить свое алиби, используя необработанные кадры из телешоу.',
         genre: 'crime',
         maturity: '18',
         slug: 'long-shot',
@@ -183,9 +180,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'The Confession Killer',
-        description:
-            'Henry Lee Lucas was an American convicted serial killer whose crimes spanned from 1960 to 1983. He was convicted of murdering eleven people and condemned to death for the murder of Debra Jackson, although his sentence would be commuted to life in prison in 1998.',
+        title: 'Признание убийцы',
+        description: 'Генри Ли Лукас был осужденным серийным убийцей в Америке, преступления которого охватывали период с 1960 по 1983 год. Он был признан виновным в убийстве одиннадцати человек и приговорен к смертной казни за убийство Дебры Джексон, хотя в 1998 году его приговор был заменен на пожизненное заключение',
         genre: 'crime',
         maturity: '18',
         slug: 'the-confession-killer',
@@ -193,9 +189,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'The Innocent Man',
-        description:
-            'Henry Lee Lucas was an American convicted serial killer whose crimes spanned from 1960 to 1983. He was convicted of murdering eleven people and condemned to death for the murder of Debra Jackson.',
+        title: 'Невинный человек',
+        description: 'Американский документальный документальный телевизионный сериал о преступности, основанный на книге Джона Гришама 2006 года «Невинный человек: убийство и несправедливость в маленьком городе».',
         genre: 'crime',
         maturity: '18',
         slug: 'the-innocent-man',
@@ -203,9 +198,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'The Staircase',
-        description:
-            "In 2001 novelist Michael Peterson's wife died, and he claimed she perished after falling down stairs at their home. The medical examiner, however, determined that she had been beaten with a weapon",
+        title: 'Лестница',
+        description: 'В 2001 году умерла жена писателя Майкла Петерсона, и он утверждал, что она погибла, упав с лестницы в их доме. Однако судмедэксперт установил, что ее избили оружием',
         genre: 'crime',
         maturity: '18',
         slug: 'the-staircase',
@@ -214,9 +208,8 @@ export function seedDatabase(firebase) {
     // Feel-good
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Good Will Hunting',
-        description:
-            'Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.',
+        title: 'Хорошая будет охота',
+        description: 'Уилл Хантинг, гений математики, решает все сложные математические задачи. Когда он сталкивается с эмоциональным кризисом, он обращается за помощью к психиатру д-ру Шону Магуирето, который помогает ему выздороветь.',
         genre: 'feel-good',
         maturity: '12',
         slug: 'good-will-hunting',
@@ -224,9 +217,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Forrest Gump',
-        description:
-            'Forrest Gump, a man with a low IQ, joins the army for service where he meets Dan and Bubba. However, he cannot stop thinking about his childhood sweetheart Jenny Curran, whose life is messed up.',
+        title: 'Форрест Гамп',
+        description: 'Форрест Гамп, человек с низким IQ, идет на службу в армию, где встречает Дэна и Буббу. Однако он не может перестать думать о возлюбленной своего детства Дженни Карран, жизнь которой испорчена.',
         genre: 'feel-good',
         maturity: '12',
         slug: 'forrest-gump',
@@ -234,9 +226,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Juno',
-        description:
-            "Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her baby's adoptive parents than she expected.",
+        title: 'Юнона',
+        description: 'Социальная неудачница Юнона защищает себя едким остроумием, но ее незапланированная беременность заставляет подростка более активно участвовать в жизни приемных родителей своего ребенка, чем она ожидала',
         genre: 'feel-good',
         maturity: '12',
         slug: 'juno',
@@ -244,9 +235,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'Midnight In Paris',
-        description:
-            'Gil arrives with his fiancee and her family in Paris for a vacation, even as he tries to finish his debut novel. He is beguiled by the city, which takes him to a time past, away from his fiancee.',
+        title: 'Полночь в Париже',
+        description: 'Гил приезжает со своей невестой и ее семьей в Париж на каникулы, даже когда пытается закончить свой дебютный роман. Его соблазняет город, который переносит его в прошлое, вдали от невесты.',
         genre: 'feel-good',
         maturity: '12',
         slug: 'midnight-in-paris',
@@ -254,9 +244,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('series').add({
         id: getUUID(),
-        title: 'School of Rock',
-        description:
-            "Dewey Finn, an amateur rock enthusiast, slyly takes up his friend's substitute teacher's job. Bearing no qualifications for it, he instead starts training the students to form a band.",
+        title: 'Школа Рока',
+        description: 'Дьюи Финн, энтузиаст рока-любителя, хитро берет на себя работу заместителя учителя своего друга. Не имея для этого квалификации, он вместо этого начинает обучать студентов формировать группу',
         genre: 'feel-good',
         maturity: '12',
         slug: 'school-of-rock',
@@ -267,9 +256,8 @@ export function seedDatabase(firebase) {
     // Drama
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'The Prestige',
-        description:
-            'Two friends and fellow magicians become bitter enemies after a sudden tragedy. As they devote themselves to this rivalry, they make sacrifices that bring them fame but with terrible consequences.',
+        title: 'Престиж',
+        description: 'Два друга и коллеги-волшебники становятся заклятыми врагами после внезапной трагедии. Посвятив себя этому соперничеству, они приносят жертвы, приносящие им славу, но с ужасными последствиями',
         genre: 'drama',
         maturity: '15',
         slug: 'the-prestige',
@@ -277,9 +265,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Fight Club',
-        description:
-            'Discontented with his capitalistic lifestyle, a white-collared insomniac forms an underground fight club with Tyler, a careless soap salesman. The project soon spirals down into something sinister.',
+        title: 'Бойцовский клуб',
+        description: 'Недовольный своим капиталистическим образом жизни, бессонница с белыми воротничками создает подпольный бойцовский клуб с Тайлером, неосторожным продавцом мыла. Вскоре проект превращается во что-то зловещее. ',
         genre: 'drama',
         maturity: '15',
         slug: 'fight-club',
@@ -287,9 +274,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Kings Speech',
-        description:
-            'King George VI tries to overcome his stammering problem with the help of speech therapist Lionel Logue and makes himself worthy enough to lead his country through World War II.',
+        title: 'Речь королей',
+        description: 'Король Георг VI пытается преодолеть проблему заикания с помощью логопеда Лайонела Лога и делает себя достаточно достойным, чтобы вести свою страну через Вторую мировую войну',
         genre: 'drama',
         maturity: '15',
         slug: 'kings-speech',
@@ -297,9 +283,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'The Revenant',
-        description:
-            'Hugh Glass, a legendary frontiersman, is severely injured in a bear attack and is abandoned by his hunting crew. He uses his skills to survive and take revenge on his companion, who betrayed him.',
+        title: 'Ревенант',
+        description: 'Хью Гласс, легендарный пограничник, тяжело ранен в результате нападения медведя и брошен своей охотничьей командой. Он использует свои навыки, чтобы выжить и отомстить своему товарищу, который его предал.',
         genre: 'drama',
         maturity: '15',
         slug: 'the-revenant',
@@ -307,9 +292,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'The Social Network',
-        description:
-            'Mark Zuckerberg creates a social networking site, Facebook, with the help of his friend Eduardo Saverin. But soon, a string of lies tears their relationship apart even as Facebook connects people.',
+        title: 'Социальная сеть',
+        description: 'Марк Цукерберг создает социальную сеть Facebook с помощью своего друга Эдуардо Саверина. Но вскоре череда лжи разрывает их отношения, даже когда Facebook объединяет людей',
         genre: 'drama',
         maturity: '12',
         slug: 'the-social-network',
@@ -318,9 +302,8 @@ export function seedDatabase(firebase) {
     // Suspense
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Shutter Island',
-        description:
-            'Teddy Daniels and Chuck Aule, two US marshals, are sent to an asylum on a remote island in order to investigate the disappearance of a patient, where Teddy uncovers a shocking truth about the place.',
+        title: 'Остров проклятых',
+        description: 'Тедди Дэниэлс и Чак Оул, два маршала США, отправлены в психиатрическую больницу на отдаленном острове для расследования исчезновения пациента, где Тедди раскрывает шокирующую правду об этом месте',
         genre: 'suspense',
         maturity: '15',
         slug: 'shutter-island',
@@ -328,9 +311,9 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Gone Girl',
+        title: 'Ушедшая девушка',
         description:
-            'Nick Dunne discovers that the entire media focus has shifted on him when his wife Amy Dunne disappears on the day of their fifth wedding anniversary.',
+            'Ник Данн обнаруживает, что все внимание СМИ переключилось на него, когда его жена Эми Данн исчезла в день их пятой годовщины свадьбы',
         genre: 'suspense',
         maturity: '15',
         slug: 'gone-girl',
@@ -338,9 +321,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Prisoners',
-        description:
-            "When the police take time to find Keller Dover's daughter and her friend, he decides to go on a search himself. His desperation leads him closer to finding the truth and also jeopardises his own life.",
+        title: 'Заключенные',
+        description: 'Когда полиции требуется время, чтобы найти дочь Келлера Дувра и ее подругу, он решает пойти на поиски сам. Его отчаяние приближает его к поиску истины, а также ставит под угрозу его собственную жизнь',
         genre: 'suspense',
         maturity: '15',
         slug: 'prisoners',
@@ -348,9 +330,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Seven',
-        description:
-            'A serial killer begins murdering people according to the seven deadly sins. Two detectives, one new to the city and the other about to retire, are tasked with apprehending the criminal.',
+        title: 'Семь',
+        description: 'Серийный убийца начинает убивать людей согласно семи смертным грехам. Двум сыщикам, одному недавно приехавшему в город, а другому собирающемуся уйти на пенсию, поручено задержать преступника.',
         genre: 'suspense',
         maturity: '15',
         slug: 'seven',
@@ -358,9 +339,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Zodiac',
-        description:
-            'Robert Graysmith, a cartoonist by profession, finds himself obsessively thinking about the Zodiac killer. He uses his puzzle-solving abilities to get closer to revealing the identity of the killer.',
+        title: 'Зодиак',
+        description: 'Роберт Грейсмит, карикатурист по профессии, навязчиво думает об убийце Зодиака. Он использует свои способности решать головоломки, чтобы приблизиться к раскрытию личности убийцы.',
         genre: 'suspense',
         maturity: '15',
         slug: 'zodiac',
@@ -369,9 +349,9 @@ export function seedDatabase(firebase) {
     // Children
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Hotel Transylvania',
+        title: 'Отель Трансильвания',
         description:
-            'Dracula, who owns a high-end resort for monsters, attempts to keep his daughter from falling in love with Jonathan, a human.',
+            'Дракула, владеющий элитным курортом для монстров, пытается удержать свою дочь от любви к Джонатану, человеку.',
         genre: 'children',
         maturity: '0',
         slug: 'hotel-transylvania',
@@ -379,9 +359,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Despicable Me',
-        description:
-            'Gru, a criminal mastermind, adopts three orphans as pawns to carry out the biggest heist in history. His life takes an unexpected turn when the little girls see him as their potential father.',
+        title: 'Гадкий я',
+        description: 'Грю, криминальный вдохновитель, берет троих сирот в качестве пешек для совершения крупнейшего ограбления в истории. Его жизнь принимает неожиданный поворот, когда маленькие девочки видят в нем своего потенциального отца.',
         genre: 'children',
         maturity: '0',
         slug: 'despicable-me',
@@ -389,9 +368,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Frozen',
-        description:
-            'Anna sets out on a journey with an iceman, Kristoff, and his reindeer, Sven, in order to find her sister, Elsa, who has the power to convert any object or person into ice.',
+        title: 'Холодное сердце',
+        description: 'Анна отправляется в путешествие с ледяным человеком Кристоффом и его оленем Свеном, чтобы найти свою сестру Эльзу, способную превратить любой объект или человека в лед',
         genre: 'children',
         maturity: '0',
         slug: 'frozen',
@@ -399,9 +377,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Spirited Away',
-        description:
-            'In this animated feature by noted Japanese director Hayao Miyazaki, 10-year-old Chihiro (Rumi Hiiragi) and her parents (Takashi Naitô, Yasuko Sawaguchi) stumble upon a seemingly abandoned amusement park.',
+        title: 'Унесенные призраками',
+        description: 'В этом анимационном фильме известного японского режиссера Хаяо Миядзаки 10-летняя Тихиро (Руми Хиираги) и ее родители (Такаши Наито, Ясуко Савагути) натыкаются на, казалось бы, заброшенный парк развлечений',
         genre: 'children',
         maturity: '0',
         slug: 'spirited-away',
@@ -409,9 +386,9 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Up',
+        title: 'Вверх',
         description:
-            "Carl, an old widower, goes off on an adventure in his flying house in search of Paradise Falls, his wife's dream destination.",
+            "Карл, старый вдовец, отправляется в приключение в своем летающем доме в поисках Парадайз-Фолс, места, о котором мечтала его жена.",
         genre: 'children',
         maturity: '0',
         slug: 'up',
@@ -420,9 +397,9 @@ export function seedDatabase(firebase) {
     // Thriller
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Joker',
+        title: 'Джокер',
         description:
-            'Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City.',
+            'Вечно одинокий в толпе, неудавшийся комик Артур Флек ищет связи, прогуливаясь по улицам Готэм-сити.',
         genre: 'thriller',
         maturity: '15',
         slug: 'joker',
@@ -430,9 +407,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'A Quiet Place',
-        description:
-            'The Abbott family must now face the terrors of the outside world as they fight for survival in silence. Forced to venture into the unknown, they realize that the creatures that hunt by sound are not the only threats that lurk beyond the sand path.',
+        title: 'Тихое место',
+        description: 'Семья Эбботов теперь должна столкнуться с ужасами внешнего мира, молча борясь за выживание. Вынужденные отправиться в неизвестность, они понимают, что существа, которые охотятся с помощью звука, - не единственные угрозы, скрывающиеся за песчаной тропой.',
         genre: 'thriller',
         maturity: '15',
         slug: 'a-quiet-place',
@@ -440,9 +416,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Black Swan',
-        description:
-            'Nina, a ballerina, gets the chance to play the White Swan, Princess Odette. But she finds herself slipping into madness when Thomas, the artistic director, decides that Lily might fit the role better.',
+        title: 'Черный лебедь',
+        description: 'Нина, балерина, получает шанс сыграть Белого лебедя, принцессу Одетту. Но она обнаруживает, что впадает в безумие, когда Томас, художественный руководитель, решает, что Лили могла бы лучше подходить на эту роль',
         genre: 'thriller',
         maturity: '15',
         slug: 'black-swan',
@@ -450,9 +425,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Nightcrawler',
-        description:
-            'Louis Bloom, a petty thief, realises that he can make money by capturing photographs of criminal activities and starts resorting to extreme tactics to get them.',
+        title: 'Ночной бездельник',
+        description: 'Луи Блум, мелкий воришка, понимает, что он может зарабатывать деньги, делая фотографии преступных действий, и начинает прибегать к экстремальным методам, чтобы их заполучить',
         genre: 'thriller',
         maturity: '15',
         slug: 'nightcrawler',
@@ -460,9 +434,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'The Silence of The Lambs',
-        description:
-            'Clarice Starling, an FBI agent, seeks help from Hannibal Lecter, a psychopathic serial killer and former psychiatrist, in order to apprehend another serial killer who has been claiming female victims.',
+        title: 'Молчание ягнят',
+        description: 'Кларис Старлинг, агент ФБР, ищет помощи у Ганнибала Лектера, серийного убийцы-психопата и бывшего психиатра, чтобы задержать другого серийного убийцу, который заявлял о своих жертвах',
         genre: 'thriller',
         maturity: '15',
         slug: 'the-silence-of-the-lambs',
@@ -471,9 +444,9 @@ export function seedDatabase(firebase) {
     // Romance
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'A Star Is Born',
+        title: 'Звезда родилась',
         description:
-            'After falling in love with struggling artist Ally, Jackson, a musician, coaxes her to follow her dreams, while he battles with alcoholism and his personal demons.',
+            'Влюбившись в борющегося артиста Элли, Джексон, музыкант, уговаривает ее следовать своим мечтам, в то время как он борется с алкоголизмом и своими личными демонами.',
         genre: 'romance',
         maturity: '15',
         slug: 'a-star-is-born',
@@ -482,8 +455,7 @@ export function seedDatabase(firebase) {
     firebase.firestore().collection('films').add({
         id: getUUID(),
         title: 'Blue Valentine',
-        description:
-            'Dean and Cynthia are married with a daughter and their marriage is about to fall apart. Both come from dysfunctional families and struggle to make sense of their relationship.',
+        description: 'Дин и Синтия женаты, у них есть дочь, и их брак вот-вот распадется. Оба происходят из неблагополучных семей и изо всех сил пытаются понять свои отношения ',
         genre: 'romance',
         maturity: '15',
         slug: 'blue-valentine',
@@ -491,9 +463,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'La La Land',
-        description:
-            'Sebastian (Ryan Gosling) and Mia (Emma Stone) are drawn together by their common desire to do what they love. But as success mounts they are faced with decisions that begin...',
+        title: 'Ла Ла Ленд',
+        description: 'Себастьяна (Райан Гослинг) и Миа (Эмма Стоун) сближает их общее желание заниматься любимым делом. Но по мере роста успеха они сталкиваются с решениями, которые начинаются ... ',
         genre: 'romance',
         maturity: '15',
         slug: 'la-la-land',
@@ -501,9 +472,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'The Notebook',
-        description:
-            "Duke reads the story of Allie and Noah, two lovers who were separated by fate, to Ms Hamilton, an old woman who suffers from Alzheimer's, on a daily basis out of his notebook.",
+        title: 'Записная книжка',
+        description: 'Герцог ежедневно читает историю об Алли и Ноа, двух влюбленных, разделенных судьбой, г-же Гамильтон, старухе, страдающей болезнью Альцгеймера, из своей записной книжки',
         genre: 'romance',
         maturity: '15',
         slug: 'the-notebook',
@@ -511,9 +481,8 @@ export function seedDatabase(firebase) {
 
     firebase.firestore().collection('films').add({
         id: getUUID(),
-        title: 'Titanic',
-        description:
-            'Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.',
+        title: 'Титаник',
+        description: 'Семнадцатилетняя Роуз происходит из аристократической семьи и собирается выйти замуж. Когда она садится на Титаник, она встречает Джека Доусона, художника, и влюбляется в него. ',
         genre: 'romance',
         maturity: '15',
         slug: 'titanic',
