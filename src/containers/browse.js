@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect, Fragment, createContext} from 'react';
+import React, {useContext, useState, useEffect, Fragment} from 'react';
 import SelectProfileContainer from "./profile";
 import {FirebaseContext} from "../context/firebase";
 import Loading from "../components/loading";

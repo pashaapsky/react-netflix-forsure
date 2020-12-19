@@ -39,7 +39,7 @@ function FooterContainer() {
 
             <Footer.Break />
 
-            <Footer.Text>Netflix Россия</Footer.Text>
+            <Footer.Text href="https://github.com/pashaapsky" target="_blank">pashaapsky@2020</Footer.Text>
         </Footer>
     );
 }

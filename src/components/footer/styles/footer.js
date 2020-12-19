@@ -45,10 +45,19 @@ export const Title = styled.p`
   margin-bottom: 40px;
 `;
 
-export const Text = styled.p`
+export const Text = styled.a`
   font-size: 13px;
   color: #757575;
-  margin-bottom: 40px;
+  width: fit-content;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export const Break = styled.div`

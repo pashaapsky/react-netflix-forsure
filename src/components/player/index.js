@@ -29,12 +29,12 @@ Player.Video = function PlayerVideo({...restProps}) {
 
     useEffect(() => {
         if (itemFeature) {
-            movieTrailer(itemFeature.title, {id: true, multi: false})
-                .then(res => setVideoId(res));
+            movieTrailer(itemFeature.slug, {id: true, multi: false})
+                .then(res => setVideoId(res))
+                .catch(e => console.error(e.message))
         }
 
     }, [itemFeature]);
-
 
     return showPlayer ? ReactDom.createPortal(
         <Overlay {...restProps} onClick={() => setShowPlayer(false)}>
